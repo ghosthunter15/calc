@@ -1,18 +1,28 @@
-#!/data/data/com.termux/files/usr/bin/env python3.6
+#!/data/data/com.termux/files/usr/bin/env python
 
 #imports
-import chalk    #for colored output
+#import chalk    #for colored output
 from sys import exit #for exit()
 from time import sleep#for sleep()
 
+class Color:
+    GREEN = '\033[32;2m'
+    END = '\033[0m'
+
 while True:
-        chalk.green("Options:")
-        chalk.green("Enter 'add' to add two numbers")
-        chalk.green("Enter 'sub' to subtract two numbers")
-        chalk.green("Enter 'mul' to multiply two numbers")
-        chalk.green("Enter 'div' to divide two numbers")
-        chalk.green("Enter 'exit' to quit")
-        user_input = input("#> ")
+        #chalk.green("Options:")
+        print(Color.GREEN + "Options: " + Color.END)
+        #chalk.green("Enter 'add' to add two numbers")
+        print(Color.GREEN + "Enter 'add' to add two numbers" + Color.END)
+        #chalk.green("Enter 'sub' to subtract two numbers")
+        print(Color.GREEN + "Enter 'sub' to subtract two numbers" + Color.END)
+        #chalk.green("Enter 'mul' to multiply two numbers")
+        print(Color.GREEN + "Enter 'mul' to multiply two numbers" + Color.END)
+        #chalk.green("Enter 'div' to divide two numbers")
+        print(Color.GREEN + "Enter 'div' to divide two numbers" + Color.END)
+        #chalk.green("Enter 'exit' to quit")
+        print(Color.GREEN + "Enter 'exit' to quit" + Color.END)
+        user_input = input(Color.GREEN + "#> "+ Color.END)
 
         if user_input == "exit":    #exit app..
         	#break
